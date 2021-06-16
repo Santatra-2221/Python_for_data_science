@@ -247,23 +247,23 @@ def user_stats(df,city):
     print('_'*40)
 
     # Display counts of gender   
-    try:
+    if "Gender" in df.columns:
         print('Numbers of user by gender :')
         print(df['Gender'].value_counts().to_string())
         print('_'*50)
-    except KeyError:
+    else :
         print("We're sorry! There is no data of user genders for {}."
               .format(city.title()))
 
     # Display earliest, most recent, and most common year of birth
-    try:
+    if "Birth Year" in df.columns:
         earliest=df['Birth Year'].min()
         recent=df['Birth Year'].max()
         mode=df['Birth Year'].mode()[0]
         print('The earliest year of birth: {}'.format(int(earliest)))
         print('The most common year of birth: {}'.format(int(mode)))
         print('The most recent year of birth: {}'.format(int(recent)))
-    except:
+    else :
         print("We're sorry! There is no data of birth year for {}."
               .format(city.title()))
 
