@@ -39,6 +39,10 @@ list_week_name=['sunday','monday','tuesday','wednesday','thursday','friday','sat
 
 def choice(prompt, choices=('yes', 'no')):
     """Return a valid input from the user given an array of possible answers.
+    
+    Args:
+    (str)prompt - prompt with input request
+    (tup)choices - tuple with elements of possibles answers
     """
 
     while True:
