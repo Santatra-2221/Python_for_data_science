@@ -316,7 +316,7 @@ def display_data(df, ref):
             print("\n")
             ref += 5
 
-            if choice("Do you want to keep printing raw data?"
+            if choice("Do you want to see more?"
                       " Enter yes or no.\n") == 'yes':
                 continue
             else:
